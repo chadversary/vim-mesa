@@ -32,6 +32,7 @@ function s:OnReadCFile()
     set softtabstop=3
     set tabstop=8
     set cinoptions=L0,(0,Ws
+    set textwidth=78
 endfunction
 
 function s:OnReadPyFile()
@@ -40,6 +41,7 @@ function s:OnReadPyFile()
     set softtabstop=4
     set tabstop=8
     set cinoptions=L0,(0,Ws
+    set textwidth=78
 endfunction
 
 function s:OnReadMakefile()
@@ -48,6 +50,7 @@ function s:OnReadMakefile()
     set softtabstop=8
     set tabstop=8
     set cinoptions=L0,(0,Ws
+    set textwidth=78
 endfunction
 
 autocmd BufNewFile,BufRead **/mesa/**.{c,cpp,h,hp,l,lpp,y,ypp} call s:OnReadCFile()
