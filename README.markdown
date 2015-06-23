@@ -12,7 +12,7 @@ If you don't have a preferred installation method, I recommend using Tim Pope's
     git clone git://github.com/tpope/vim-pathogen pathogen
     vim -u NONE -c "helptags pathogen/doc" -c q
 
-And then install this plugin with:
+Then install this plugin with:
 
     cd ~/.vim/bundle
     git clone git://github.com/chadversary/vim-mesa.git mesa
@@ -29,7 +29,7 @@ And then install this plugin with:
 
 ## Recommendations
 
-If you're a Mesa developer, I recommend the additional Vim plugins:
+If you're a Mesa developer, I recommend these additional Vim plugins:
 
 - glsl (http://github.com/tikhomirov/vim-glsl)
 - git (http://github.com/tpope/vim-git)
