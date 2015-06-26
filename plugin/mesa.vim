@@ -31,7 +31,7 @@ function s:OnReadCFile()
     set shiftwidth=3
     set softtabstop=3
     set tabstop=8
-    set cinoptions=L-1,(0,W3
+    set cinoptions=:0,l1,L-1,(0,W3
     set textwidth=78
 endfunction
 
