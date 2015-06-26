@@ -31,7 +31,7 @@ function s:OnReadCFile()
     set shiftwidth=3
     set softtabstop=3
     set tabstop=8
-    set cinoptions=L-1,(0,Ws
+    set cinoptions=L-1,(0,W3
     set textwidth=78
 endfunction
 
@@ -40,7 +40,7 @@ function s:OnReadPyFile()
     set shiftwidth=4
     set softtabstop=4
     set tabstop=8
-    set cinoptions=(0,Ws
+    set cinoptions=(0,W8
     set textwidth=78
 endfunction
 
@@ -49,7 +49,7 @@ function s:OnReadMakefile()
     set shiftwidth=8
     set softtabstop=8
     set tabstop=8
-    set cinoptions=(0,Ws
+    set cinoptions=(0
     set textwidth=78
 endfunction
 
