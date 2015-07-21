@@ -58,7 +58,7 @@ function s:MesaOnReadMakefile()
 endfunction
 
 function s:MesaOnReadFile()
-    if &filetype == "c"
+    if &filetype == "c" || &filetype == "cpp"
         call s:MesaOnReadCFile()
     elseif &filetype == "python"
         call s:MesaOnReadPyFile()
@@ -90,7 +90,7 @@ function s:PiglitOnReadCMakeFile()
 endfunction
 
 function s:PiglitOnReadFile()
-    if &filetype == "c"
+    if &filetype == "c" || &filetype == "cpp"
         call s:PiglitOnReadCFile()
     elseif &filetype == "python"
         call s:PiglitOnReadPyFile()
