@@ -62,7 +62,7 @@ function s:MesaOnReadFile()
         call s:MesaOnReadCFile()
     elseif &filetype == "python"
         call s:MesaOnReadPyFile()
-    elseif &filetype == "make"
+    elseif &filetype == "make" || &filetype == "automake"
         call s:MesaOnReadMakefile()
     endif
 endfunction
