@@ -26,7 +26,7 @@
 " NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 " SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-function s:OnReadCFile()
+function s:MesaOnReadCFile()
     set expandtab
     set shiftwidth=3
     set softtabstop=3
@@ -35,7 +35,7 @@ function s:OnReadCFile()
     set textwidth=78
 endfunction
 
-function s:OnReadPyFile()
+function s:MesaOnReadPyFile()
     set expandtab
     set shiftwidth=4
     set softtabstop=4
@@ -44,7 +44,7 @@ function s:OnReadPyFile()
     set textwidth=78
 endfunction
 
-function s:OnReadMakefile()
+function s:MesaOnReadMakefile()
     set noexpandtab
     set shiftwidth=8
     set softtabstop=8
@@ -53,7 +53,7 @@ function s:OnReadMakefile()
     set textwidth=78
 endfunction
 
-autocmd BufNewFile,BufRead **/mesa/**.{c,cpp,h,hp,l,lpp,y,ypp} call s:OnReadCFile()
-autocmd BufNewFile,BufRead **/mesa/**.py call s:OnReadPyFile()
-autocmd BufNewFile,BufRead **/mesa/**.mk call s:OnReadMakefile()
-autocmd BufNewFile,BufRead **/mesa/**/Makefile.am call s:OnReadMakefile()
+autocmd BufNewFile,BufRead **/mesa/**.{c,cpp,h,hp,l,lpp,y,ypp} call s:MesaOnReadCFile()
+autocmd BufNewFile,BufRead **/mesa/**.py call s:MesaOnReadPyFile()
+autocmd BufNewFile,BufRead **/mesa/**.mk call s:MesaOnReadMakefile()
+autocmd BufNewFile,BufRead **/mesa/**/Makefile.am call s:MesaOnReadMakefile()
