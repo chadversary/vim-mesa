@@ -67,4 +67,37 @@ function s:MesaOnReadFile()
     endif
 endfunction
 
+function s:PiglitOnReadCFile()
+    set noexpandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set tabstop=8
+    set cinoptions=:0,l1,L-1,(0,Ws
+    set textwidth=78
+endfunction
+
+function s:PiglitOnReadPyFile()
+    call s:SetPEP8Style()
+endfunction
+
+function s:PiglitOnReadCMakeFile()
+    set noexpandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set tabstop=8
+    set cinoptions=(0
+    set textwidth=78
+endfunction
+
+function s:PiglitOnReadFile()
+    if &filetype == "c"
+        call s:PiglitOnReadCFile()
+    elseif &filetype == "python"
+        call s:PiglitOnReadPyFile()
+    elseif &filetype == "cmake"
+        call s:PiglitOnReadCMakeFile()
+    endif
+endfunction
+
 autocmd BufNewFile,BufRead **/mesa/** call s:MesaOnReadFile()
+autocmd BufNewFile,BufRead **/piglit/** call s:PiglitOnReadFile()
