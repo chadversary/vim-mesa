@@ -26,6 +26,15 @@
 " NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 " SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+function s:SetPEP8Style()
+    set expandtab
+    set shiftwidth=4
+    set softtabstop=4
+    set tabstop=8
+    set cinoptions=(0,W8
+    set textwidth=78
+endfunction
+
 function s:MesaOnReadCFile()
     set expandtab
     set shiftwidth=3
@@ -36,12 +45,7 @@ function s:MesaOnReadCFile()
 endfunction
 
 function s:MesaOnReadPyFile()
-    set expandtab
-    set shiftwidth=4
-    set softtabstop=4
-    set tabstop=8
-    set cinoptions=(0,W8
-    set textwidth=78
+    call s:SetPEP8Style()
 endfunction
 
 function s:MesaOnReadMakefile()
