@@ -53,7 +53,14 @@ function s:MesaOnReadMakefile()
     set textwidth=78
 endfunction
 
-autocmd BufNewFile,BufRead **/mesa/**.{c,cpp,h,hp,l,lpp,y,ypp} call s:MesaOnReadCFile()
-autocmd BufNewFile,BufRead **/mesa/**.py call s:MesaOnReadPyFile()
-autocmd BufNewFile,BufRead **/mesa/**.mk call s:MesaOnReadMakefile()
-autocmd BufNewFile,BufRead **/mesa/**/Makefile.am call s:MesaOnReadMakefile()
+function s:MesaOnReadFile()
+    if &filetype == "c"
+        call s:MesaOnReadCFile()
+    elseif &filetype == "python"
+        call s:MesaOnReadPyFile()
+    elseif &filetype == "make"
+        call s:MesaOnReadMakefile()
+    endif
+endfunction
+
+autocmd BufNewFile,BufRead **/mesa/** call s:MesaOnReadFile()
